@@ -1,8 +1,8 @@
-
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -13,10 +13,16 @@ const Contact = () => {
           <p className="text-gray-600">
             Have questions or need assistance? Reach out to our team for support with your migration journey.
           </p>
+          <div className="mt-6">
+            <Link to="/register">
+              <Button className="bg-develop-600 hover:bg-develop-700 text-white">
+                Register for an Interview ($3)
+              </Button>
+            </Link>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-          {/* Contact Info */}
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-6">Get in Touch</h3>
@@ -85,7 +91,6 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Contact Form */}
           <div className="lg:col-span-3 bg-white rounded-xl shadow-sm p-6 lg:p-8">
             <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
             
